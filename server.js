@@ -35,6 +35,58 @@ app.use('/generated_cvs', express.static('generated_cvs'));
 // Routes
 app.use('/api/cv', cvRoutes);
 
+// Root route - API documentation
+app.get('/', (req, res) => {
+  res.json({
+    name: 'CV Generator Backend API',
+    version: '1.0.0',
+    status: 'Running',
+    endpoints: {
+      health: {
+        method: 'GET',
+        path: '/health',
+        description: 'Check if the server is running'
+      },
+      generateCV: {
+        method: 'POST',
+        path: '/api/cv/generate',
+        description: 'Generate 10 CV templates in PDF and DOCX formats',
+        contentType: 'multipart/form-data',
+        requiredFields: [
+          'name', 'fathersName', 'mothersName', 'presentAddress', 'permanentAddress',
+          'sscGPA', 'sscSchool', 'sscBoard', 'hscGPA', 'hscCollege', 'hscBoard',
+          'graduationSubject', 'graduationCGPA', 'graduationInstitution',
+          'hobbies', 'currentJob', 'previousJob', 'jobDuration',
+          'maritalStatus', 'gender', 'age', 'dob', 'nationality',
+          'languages', 'email', 'contact', 'skills'
+        ],
+        optionalFields: ['photo (max 5MB, JPG/PNG/GIF)'],
+        response: 'Returns session ID and URLs for all generated CVs'
+      },
+      viewCV: {
+        method: 'GET',
+        path: '/api/cv/:sessionId/:templateId/:format',
+        description: 'View a specific CV (format: pdf or docx)',
+        example: '/api/cv/abc-123/1/pdf'
+      },
+      downloadCV: {
+        method: 'GET',
+        path: '/api/cv/download/:sessionId/:templateId/:format',
+        description: 'Download a specific CV',
+        example: '/api/cv/download/abc-123/1/pdf'
+      }
+    },
+    features: [
+      '10 unique CV templates with different designs and colors',
+      'PDF and DOCX format support',
+      'Photo upload and embedding',
+      'Professional layouts (single-column and two-column)',
+      'Instant download and preview options'
+    ],
+    documentation: 'https://github.com/safiullah-foragy/cv_generator_backend'
+  });
+});
+
 // Health check
 app.get('/health', (req, res) => {
   res.json({ status: 'OK', message: 'CV Generator Backend is running' });
