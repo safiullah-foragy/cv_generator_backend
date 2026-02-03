@@ -13,3 +13,5 @@ generated_cvs/*
 test-api.ps1
 test-api.sh
 .vscode
+.cache
+.puppeteer_cache
