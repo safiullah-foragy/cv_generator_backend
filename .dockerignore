@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log
+.env
+.git
+.gitignore
+README.md
+*.md
+.DS_Store
+uploads/*
+!uploads/.gitkeep
+generated_cvs/*
+!generated_cvs/.gitkeep
+test-api.ps1
+test-api.sh
+.vscode
