@@ -4,13 +4,14 @@
   "description": "CV Generator Backend API with multiple templates and PDF/DOCX export",
   "main": "server.js",
   "engines": {
-    "node": ">=14.0.0",
-    "npm": ">=6.0.0"
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   },
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "build": "echo 'No build step required'"
+    "build": "echo 'Build completed'",
+    "render-build": "npm install && npx puppeteer browsers install chrome"
   },
   "keywords": ["cv", "resume", "generator", "pdf", "docx"],
   "author": "",
