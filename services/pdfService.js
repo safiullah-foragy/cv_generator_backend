@@ -314,7 +314,8 @@ class PDFService {
     if (data.alternatePhone) contactInfo += ` | ${data.alternatePhone}`;
     doc.fontSize(10).text(contactInfo, 50, 55, { width: 410 });
     if (data.linkedIn || data.website) {
-      let webInfo = '';\n      if (data.linkedIn) webInfo += data.linkedIn;
+      let webInfo = '';
+      if (data.linkedIn) webInfo += data.linkedIn;
       if (data.website) webInfo += (webInfo ? ' | ' : '') + data.website;
       doc.fontSize(8).text(webInfo, 50, 68, { width: 410 });
     }
