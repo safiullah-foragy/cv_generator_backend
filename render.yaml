@@ -1,0 +1,23 @@
+services:
+  # Backend Service
+  - type: web
+    name: cv-generator-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+    healthCheckPath: /health
+    
+  # Static Site for Frontend (Optional - if hosting separately)
+  - type: web
+    name: cv-generator-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://cv-generator-backend.onrender.com
