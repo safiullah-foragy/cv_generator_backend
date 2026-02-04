@@ -1,0 +1,56 @@
+{
+  "personalInformation": {
+    "name": "Ahmed Hassan",
+    "fathersName": "Mohammad Hassan",
+    "mothersName": "Fatima Hassan",
+    "presentAddress": "House 45, Road 12, Dhanmondi, Dhaka-1209",
+    "permanentAddress": "Village: Rampur, Post: Jalalpur, Upazila: Sreepur, District: Gazipur",
+    "dateOfBirth": "1996-08-20",
+    "age": "29",
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "nationality": "Bangladeshi",
+    "gmail": "ahmed.hassan@gmail.com",
+    "contactNumber": "+880 1712-345678"
+  },
+  "education": {
+    "ssc": {
+      "sscGPA": "5.00",
+      "sscSchool": "Dhaka Residential Model College",
+      "sscBoard": "Dhaka",
+      "year": "2012"
+    },
+    "hsc": {
+      "hscGPA": "5.00",
+      "hscCollege": "Notre Dame College",
+      "hscBoard": "Dhaka",
+      "year": "2014"
+    },
+    "graduation": {
+      "graduationSubject": "Computer Science & Engineering",
+      "graduationCGPA": "3.85",
+      "graduationInstitution": "Bangladesh University of Engineering and Technology (BUET)",
+      "year": "2019"
+    }
+  },
+  "employment": {
+    "currentJob": "Senior Full Stack Developer at Tech Innovations Ltd.",
+    "previousJobs": [
+      {
+        "position": "Full Stack Developer",
+        "company": "Digital Solutions Bangladesh",
+        "duration": "January 2020 - December 2023"
+      },
+      {
+        "position": "Junior Software Engineer",
+        "company": "CodeCraft Technologies",
+        "duration": "March 2019 - December 2019"
+      }
+    ]
+  },
+  "skillsAndLanguages": {
+    "skills": "JavaScript, TypeScript, React.js, Node.js, Express.js, MongoDB, PostgreSQL, Docker, Kubernetes, AWS, Git, REST APIs, GraphQL, Redis, Next.js, Tailwind CSS",
+    "languages": "Bengali (Native), English (Fluent), Hindi (Intermediate)",
+    "hobbies": "Web Development Tutorials, Cricket, Traveling, Photography, Reading Tech Blogs"
+  }
+}
